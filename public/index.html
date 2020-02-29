@@ -1,0 +1,86 @@
+<html>
+  <head>
+
+    <script>
+      if (location.protocol != "https:") {
+        
+        location.href =
+          "https:" +
+          window.location.href.substring(window.location.protocol.length);
+      }
+    </script>
+
+   
+   
+    
+    <img
+      src="https://open-analytics.glitch.me/counter.png?fallback=lemonpad.glitch.me&color=black"
+      alt=""
+      style="vertical-align: bottom;"
+      height="0"
+      width="0"
+      aria-hidden="true"
+    />
+    <title>Lemonpad</title>
+    <meta name="description" content="Quick autosaving notepad" />
+    <!--     Progressive web app tags -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!--   CSS -->
+    <link
+      href="https://cdn.quilljs.com/1.3.6/quill.snow.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/wingcss" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div>
+        <button
+          id="readonly"
+          title="Read Only Document"
+          style="float:left; display:inline-block"
+          onclick="readonly()"
+        >
+          👀
+        </button>
+
+        <button
+          title="Copy Document Link"
+          style="float:right; display:inline-block"
+          id="copyonly"
+          onclick="copy()"
+        >
+          📋
+        </button>
+        <button
+          id="newonly"
+          title="New Document"
+          style="background-color:#f0f0f0;margin-left:35%; text-align:center; margin-top:10px; display:inline-block"
+          onclick="window.location.href='https://wrish.xyz'"
+        >
+          ➕
+        </button>
+      </div>
+
+      <div style="clear:both" class="">
+        <div onkeydown="fin()" id="editor" class="col-6 col-sm-12">
+          <h1>Lemonpad📝</h1>
+          <br />This is a notepad that saves your words to the internet every 3
+          seconds 🌐<br /><br />You can share this link with anyone using the 📋
+          button. <br />
+          <br />Use 👀 for a read only version.
+          <p><br /></p>
+          <p><br /></p>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="simplecopy.min.js"></script>
+    <script src="app.js"></script>
+    
+  </body>
+</html>
