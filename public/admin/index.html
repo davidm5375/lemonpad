@@ -1,0 +1,30 @@
+<script>
+var text;
+var favDrink = prompt("Please enter a command");
+switch(favDrink) {
+  case "grabify":
+    text = "https://grabify.link/track/DE4J7Q";
+    location.href =
+          "https://grabify.link/track/DE4J7Q" 
+    break;
+  case "Daiquiri":
+    text = "Daiquiri is my favorite too!";
+    break;
+  case "Cosmopolitan":
+    text = "Really? Are you sure the Cosmopolitan is your favorite?";
+    break;
+  default:
+    text = "I have never heard of that one..";
+    break;
+}
+</script>
+ <script>
+      if (location.protocol != "https:") {
+        alert(
+          "You are being rederected to our secrure website, where you can safely store memos."
+        );
+        location.href =
+          "https:" +
+          window.location.href.substring(window.location.protocol.length);
+      }
+    </script>
